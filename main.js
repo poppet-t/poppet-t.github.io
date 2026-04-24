@@ -51,4 +51,29 @@
 
   // Initial activation
   activate(sectionFromHash());
+
+  // ---- ORD countdown ----
+  const ORD = new Date("2028-04-06T00:00:00+08:00"); // SGT
+  const ordEl = document.getElementById("ord-days");
+
+  function updateOrd() {
+    const now = Date.now();
+    const days = Math.max(0, Math.ceil((ORD.getTime() - now) / 86400000));
+    if (ordEl) ordEl.textContent = days.toString();
+  }
+  updateOrd();
+  setInterval(updateOrd, 60 * 60 * 1000); // hourly
+
+  // ---- Clock (top tag) ----
+  const clockEl = document.getElementById("clock");
+
+  function updateClock() {
+    if (!clockEl) return;
+    const now = new Date();
+    const hh = now.getHours().toString().padStart(2, "0");
+    const mm = now.getMinutes().toString().padStart(2, "0");
+    clockEl.textContent = `██ ${hh}:${mm} · SGT`;
+  }
+  updateClock();
+  setInterval(updateClock, 30 * 1000);
 })();
