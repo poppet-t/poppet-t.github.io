@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duanmu Chuanjie — poppet-t</title>
+  <meta name="description" content="Personal site of Duanmu Chuanjie (poppet-t) — security researcher & CTF player based in Singapore.">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="chrome">
+    <div class="tag tag-top">
+      <span>POPPET-T.GITHUB.IO</span>
+      <span id="clock">--:-- · SGT</span>
+    </div>
+
+    <!-- TOP SCREEN (passive hero) -->
+    <section class="screen screen-top" aria-label="Hero">
+      <div class="hero-text">
+        <h1 class="hero-name">DUANMU<br>CHUANJIE</h1>
+        <ul class="hero-lines">
+          <li><span class="dim">&gt;</span> security researcher &amp; CTF player</li>
+          <li><span class="dim">&gt;</span> Singapore</li>
+          <li><span class="dim">&gt;</span> <span class="label">now:</span> serving national service · ORD in <span id="ord-days">—</span> days</li>
+          <li><span class="dim">&gt;</span> <span class="label">personal:</span> web-engine VR + AI dev</li>
+        </ul>
+        <div class="ticker">
+          <span class="live">●</span> TISC 2025 · 15th/1515 &nbsp;·&nbsp; GreyCTF · 12th &nbsp;·&nbsp; ICO 2025 · Silver (int'l 34)
+        </div>
+      </div>
+      <div class="avatar">
+        <img src="/fishing.gif" alt="Pixel art of Duanmu Chuanjie fishing" width="72" height="72">
+      </div>
+    </section>
+
+    <!-- BOTTOM SCREEN (interactive) -->
+    <section class="screen screen-bottom" aria-label="Navigation and content">
+      <nav class="nav" aria-label="Primary">
+        <button class="tile" data-section="about">about</button>
+        <button class="tile" data-section="work">work</button>
+        <button class="tile" data-section="research">research</button>
+        <button class="tile" data-section="ctf">ctf</button>
+        <button class="tile" data-section="contact">contact</button>
+      </nav>
+
+      <div class="content">
+        <article class="section" data-section="about" hidden></article>
+        <article class="section" data-section="work" hidden></article>
+        <article class="section" data-section="research" hidden></article>
+        <article class="section" data-section="ctf" hidden></article>
+        <article class="section" data-section="contact" hidden></article>
+      </div>
+
+      <div class="hint">↑↓ OR CLICK TO SWITCH SECTION</div>
+    </section>
+
+    <div class="tag tag-bottom">
+      <span>▰ ▱ ▱ ▱</span>
+    </div>
+  </main>
+
+  <script src="/main.js"></script>
+</body>
+</html>
