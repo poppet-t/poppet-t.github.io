@@ -15,6 +15,20 @@ Vanilla HTML, CSS, and JavaScript. No build step. Served as-is by GitHub Pages.
 - `resume.pdf` — résumé download
 - Fonts: Press Start 2P, VT323, JetBrains Mono (Google Fonts)
 
+## Writing a blog post
+
+1. Create `posts/<slug>.md` with your content (standard Markdown, GFM tables and fenced code blocks supported).
+2. Add an entry to `posts/index.json`:
+   ```json
+   {
+     "slug": "your-slug",
+     "title": "Your title",
+     "date": "2026-04-24",
+     "excerpt": "One sentence for the index listing."
+   }
+   ```
+3. Commit and push. The post is live at `https://poppet-t.github.io/#blog/your-slug` once Pages re-deploys (~30s).
+
 ## Local development
 
 ```sh
