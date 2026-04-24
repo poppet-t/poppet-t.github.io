@@ -1,0 +1,80 @@
+/* ===== Tokens ===== */
+:root {
+  --shell: #1a1a1a;
+  --shell-bg: #0a0a0a;
+  --screen-bg: #050505;
+  --fg: #8AFFA0;
+  --fg-dim: #4a8a5a;
+  --fg-deep: #2a5a35;
+  --fg-highlight: #e0ffa0;
+  --border: #1a3a1f;
+  --border-strong: #2a2a2a;
+
+  --font-pixel: "Press Start 2P", monospace;
+  --font-crt: "VT323", monospace;
+  --font-body: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--shell-bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+img { display: block; image-rendering: pixelated; }
+ul { list-style: none; padding: 0; margin: 0; }
+a { color: var(--fg); text-decoration: none; border-bottom: 1px dotted var(--fg-dim); }
+a:hover { color: var(--fg-highlight); border-bottom-color: var(--fg-highlight); }
+
+/* ===== Chrome ===== */
+.chrome {
+  background: var(--shell);
+  border: 2px solid var(--border-strong);
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  max-width: 720px;
+  box-shadow: inset -1px -1px 0 var(--border-strong), 0 0 20px rgba(138,255,160,0.06);
+}
+
+.tag {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  color: #5a5a5a;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 4px;
+}
+.tag-top { margin-bottom: 8px; }
+.tag-bottom {
+  justify-content: center;
+  color: var(--fg-deep);
+  margin-top: 4px;
+}
+
+/* ===== Screens ===== */
+.screen {
+  background: var(--screen-bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 14px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 20px rgba(138,255,160,0.04);
+  position: relative;
+}
