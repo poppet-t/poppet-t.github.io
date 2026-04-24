@@ -227,3 +227,45 @@ a:hover { color: var(--fg-highlight); border-bottom-color: var(--fg-highlight); 
 }
 
 .section .acc { color: var(--fg-highlight); }
+
+/* ===== CTF featured cards ===== */
+.featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 8px 0 14px 0;
+}
+.featured .card {
+  border: 1px solid var(--fg);
+  padding: 8px;
+  background: rgba(138,255,160,0.04);
+}
+.featured .card .event {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  color: var(--fg);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.featured .card .result {
+  font-family: var(--font-crt);
+  font-size: 16px;
+  color: var(--fg-highlight);
+}
+.featured .card .sub {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--fg-dim);
+  margin-top: 2px;
+}
+
+.ctf-others {
+  font-family: var(--font-crt);
+  font-size: 14px;
+  color: var(--fg-dim);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 6px 0 14px 0;
+}
+.ctf-others .acc { color: var(--fg); }
