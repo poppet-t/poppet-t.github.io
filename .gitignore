@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Superpowers brainstorm scratch
+.superpowers/
+
+# Python (for build script venv)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor
+.vscode/
+.idea/
+
+# Build script intermediate files
+scripts/frames/
