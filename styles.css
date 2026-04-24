@@ -134,3 +134,96 @@ a:hover { color: var(--fg-highlight); border-bottom-color: var(--fg-highlight); 
   justify-content: center;
 }
 .avatar img { width: 100%; height: 100%; object-fit: contain; }
+
+/* ===== Bottom screen ===== */
+.screen-bottom { min-height: 240px; }
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.tile {
+  font-family: var(--font-crt);
+  font-size: 15px;
+  border: 1px solid var(--border);
+  padding: 8px 4px;
+  text-align: center;
+  color: var(--fg-dim);
+  transition: color 120ms, border-color 120ms, background 120ms;
+}
+.tile:hover {
+  color: var(--fg);
+  border-color: var(--fg);
+}
+.tile[aria-current="true"] {
+  color: var(--fg);
+  border-color: var(--fg);
+  background: rgba(138,255,160,0.06);
+}
+
+.hint {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  color: var(--fg-deep);
+  letter-spacing: 1px;
+}
+
+/* ===== Sections (content) ===== */
+.content { padding-bottom: 24px; }
+
+.section[hidden] { display: none; }
+.section { animation: fade 160ms ease-out; }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section h2 {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: var(--fg);
+  margin: 0 0 10px 0;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.section h3 {
+  font-family: var(--font-crt);
+  font-size: 16px;
+  color: var(--fg);
+  margin: 12px 0 4px 0;
+}
+
+.section p, .section li {
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.section ul.bullets { margin: 6px 0; }
+.section ul.bullets li {
+  padding-left: 14px;
+  position: relative;
+}
+.section ul.bullets li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--fg-dim);
+}
+
+.section .meta {
+  font-family: var(--font-crt);
+  font-size: 13px;
+  color: var(--fg-dim);
+  margin-bottom: 4px;
+}
+
+.section .acc { color: var(--fg-highlight); }
