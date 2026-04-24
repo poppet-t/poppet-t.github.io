@@ -140,7 +140,7 @@ a:hover { color: var(--fg-highlight); border-bottom-color: var(--fg-highlight); 
 
 .nav {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 4px;
   margin-bottom: 14px;
 }
