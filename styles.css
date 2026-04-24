@@ -269,3 +269,39 @@ a:hover { color: var(--fg-highlight); border-bottom-color: var(--fg-highlight); 
   margin: 6px 0 14px 0;
 }
 .ctf-others .acc { color: var(--fg); }
+
+/* ===== Mobile ===== */
+@media (max-width: 700px) {
+  body { padding: 10px; }
+
+  .chrome { padding: 8px; }
+
+  .screen-top {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .screen-top .avatar {
+    width: 56px;
+    height: 56px;
+    margin-left: 0;
+    align-self: start;
+    order: -1;
+  }
+  .hero-name { font-size: 14px; }
+  .hero-lines { font-size: 14px; }
+  .ticker { font-size: 12px; }
+
+  .nav {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+  }
+  .tile { font-size: 13px; padding: 8px 2px; }
+
+  .featured { grid-template-columns: 1fr; }
+
+  .hint { font-size: 5px; }
+}
+
+@media (max-width: 380px) {
+  .nav { grid-template-columns: repeat(2, 1fr); }
+}
